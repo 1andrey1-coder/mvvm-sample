@@ -8,11 +8,11 @@ namespace mvvm_sample.ClientWork.Model
 {
     internal class ClientDB
     {
-        static ClientDB instance;
-        internal static ClientDB GetInstance()
+        static MvvmDzContext instance;
+        internal static MvvmDzContext GetInstance()
         {
             if (instance == null)
-                instance = new ClientDB();
+                instance = new MvvmDzContext();
             return instance;
         }
 

@@ -1,4 +1,5 @@
-﻿using mvvm_sample.ClientWork.View;
+﻿using mvvm_sample.ClientWork.Model;
+using mvvm_sample.ClientWork.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,14 @@ namespace mvvm_sample
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+          
     {
+        //public List<TblProduct> Clients { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            //Clients = ClientDB.GetInstance().TblProducts.ToList();
+
         }
     }
 }

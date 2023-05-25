@@ -15,8 +15,10 @@ namespace mvvm_sample.ClientWork.ViewModel
         private Client selectedClient;
 
         public ObservableCollection<Client> Clients { get; set; }
+        //public List<TblProduct> Products { get; set; }
 
         public VMCommand AddClient { get; set; }
+        public VMCommand ListProduct { get; set; }
         public VMCommand<Client> EditClient { get; set; }
 
         public Client SelectedClient { 
@@ -30,15 +32,26 @@ namespace mvvm_sample.ClientWork.ViewModel
 
         public ClientListVM()
         {
-            Clients = new ObservableCollection<Client>(
-                ClientDB.GetInstance().LoadClients());
+            //Products = new List<TblProduct>(
+            //    ClientDB.GetInstance().TblProducts);
 
-            AddClient = new VMCommand(() =>
-            {
-                var client = new Client();
-                Clients.Add(client);
-                ClientDB.GetInstance().Add(client);
-            });
+            //Clients = new ObservableCollection<Client>(
+            //    ClientDB.GetInstance().LoadClients());
+
+            //ListProduct = new VMCommand(() =>
+            //{
+            //    ClientDB.GetInstance().TblProducts.ToList();
+
+            //});
+
+
+
+            //AddClient = new VMCommand(() =>
+            //{
+            //    var client = new Client();
+            //    Clients.Add(client);
+            //    ClientDB.GetInstance().Add(client);
+            //});
 
             EditClient = new VMCommand<Client>(s =>
             {

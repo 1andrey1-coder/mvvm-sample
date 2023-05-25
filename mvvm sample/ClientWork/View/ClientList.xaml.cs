@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mvvm_sample.ClientWork.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,13 @@ namespace mvvm_sample.ClientWork.View
     /// </summary>
     public partial class ClientList : Page
     {
+
+
+        //public List<TblProduct> Clients { get; set; }
         public ClientList()
         {
             InitializeComponent();
+            //Clients = ClientDB.GetInstance().TblProducts.ToList();
         }
     }
 }

@@ -12,6 +12,7 @@
     <Page.Resources>
         <vm:ClientListVM x:Key="listVm"/>
         <ContextMenu x:Key="menu">
+            <MenuItem Header="Обновить" Command="{Binding ListProduct}"/>
             <MenuItem Header="Добавить" Command="{Binding AddClient}"/>
             <MenuItem Header="Редактировать" Command="{Binding EditClient}" CommandParameter="{Binding SelectedClient}"/>
         </ContextMenu>
